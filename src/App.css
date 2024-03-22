@@ -1,0 +1,19 @@
+.App {
+  text-align: center;
+}
+
+.bold{
+  font-weight: bold;
+}
+.text-green{
+  color: rgb(11, 187, 11);
+}
+.font-small{
+  font-size: 13px;
+}
+.text-align-justify{
+  text-align: justify;
+}
+.list-style-type-none{
+  list-style-type: none;
+}
