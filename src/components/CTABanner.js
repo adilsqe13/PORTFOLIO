@@ -10,13 +10,12 @@ export default function AddBanner(){
     },[]);
 
     return(
-        <section className="py-20 w-full table relative bg-[url('../../assets/images/bg/bg2.jpg')] bg-no-repeat bg-center bg-cover">
-            <div className="absolute inset-0 bg-slate-900/70"></div>
+        <section className=' bg-transparent  py-5'>
             <div className="container relative">
                 <div className="grid grid-cols-1 text-center">
-                    <h3 className="p-4 bold">I Am Available For Freelancer Projects.</h3>
+                    <h1 className=" md:text-2xl text-xl md:leading-normal leading-normal font-semibold">I Am Available For Freelancer Projects</h1>
 
-                    <p className="p-3">{userData && userData.about.description}</p>
+                    <p className="py-3">{userData && userData.about.description}</p>
                 
                     <div className="relative m-0">
                         <Link to="" className="btn btn-warning m-0 form-control p-1">Hire Me</Link>

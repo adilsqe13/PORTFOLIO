@@ -15,7 +15,7 @@ export default function GetInTouch() {
         <section className="relative md:py-24 py-16 bg-gray-50 dark:bg-slate-800" id="contact">
             <div className="container">
                 <div className="grid grid-cols-1 pb-8 text-center">
-                    <h3 className="mb-6 md:text-2xl text-xl md:leading-normal leading-normal font-semibold">Get In Touch !</h3>
+                    <h3 className="mb-6 md:text-2xl text-xl md:leading-normal leading-normal font-semibold">Get In Touch</h3>
 
                     <p className="text-slate-400 mx-auto text-[15px]">{userData && userData.about.description}</p>
                 </div>
@@ -82,29 +82,63 @@ export default function GetInTouch() {
                                     <p className="text-slate-400 text-[15px] mb-2">{userData && userData.about.address}</p>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                </div>
+                <div className="container margin-top-100">
+                    <h1 className="md:text-2xl text-xl md:leading-normal leading-normal font-semibold bold fs-2 dfjcac">Follow me on</h1>
+                    <div className="row py-3">
+                        <div className="col-3">
+                            <div className="flex mt-4 list-style-type-none">
+                                <div className="icons text-center mx-auto">
+                                    <img src={userData && userData.social_handles[0].image.url} height={40} width={40} alt="icon" />
+                                </div>
 
-                            <ul>
-                                {userData && userData.social_handles.map((item, index) => {
-                                    return (
-                                        <li key={index} className="flex mt-4 list-style-type-none">
-                                            <div className="icons text-center mx-auto">
-                                                <img src={item.image.url} height={40} width={40} alt="icon" />
-                                            </div>
+                                <div className="flex-1 ms-6">
+                                    <h5 className="text-[17px] dark:text-white mb-2 font-medium">{userData && userData.social_handles[0].platform}</h5>
+                                    <Link to="mailto:contact@example.com" className="text-slate-400 text-[15px]">Follow</Link>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-3">
+                        <div className="flex mt-4 list-style-type-none">
+                                <div className="icons text-center mx-auto">
+                                    <img src={userData && userData.social_handles[1].image.url} height={40} width={40} alt="icon" />
+                                </div>
 
-                                            <div className="flex-1 ms-6">
-                                                <h5 className="text-[17px] dark:text-white mb-2 font-medium">{item.platform}</h5>
-                                                <Link to="mailto:contact@example.com" className="text-slate-400 text-[15px]">Follow</Link>
-                                            </div>
-                                        </li>
-                                    )
-                                })}
-                            </ul>
+                                <div className="flex-1 ms-6">
+                                    <h5 className="text-[17px] dark:text-white mb-2 font-medium">{userData && userData.social_handles[1].platform}</h5>
+                                    <Link to="mailto:contact@example.com" className="text-slate-400 text-[15px]">Follow</Link>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-3">
+                        <div className="flex mt-4 list-style-type-none">
+                                <div className="icons text-center mx-auto">
+                                    <img src={userData && userData.social_handles[2].image.url} height={40} width={40} alt="icon" />
+                                </div>
+
+                                <div className="flex-1 ms-6">
+                                    <h5 className="text-[17px] dark:text-white mb-2 font-medium">{userData && userData.social_handles[2].platform}</h5>
+                                    <Link to="mailto:contact@example.com" className="text-slate-400 text-[15px]">Follow</Link>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-3">
+                        <div className="flex mt-4 list-style-type-none">
+                                <div className="icons text-center mx-auto">
+                                    <img src={userData && userData.social_handles[3].image.url} height={40} width={40} alt="icon" />
+                                </div>
+
+                                <div className="flex-1 ms-6">
+                                    <h5 className="text-[17px] dark:text-white mb-2 font-medium">{userData && userData.social_handles[3].platform}</h5>
+                                    <Link to="mailto:contact@example.com" className="text-slate-400 text-[15px]">Follow</Link>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-
-
         </section>
     )
 }

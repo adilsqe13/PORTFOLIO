@@ -17,7 +17,7 @@ export default function HeroOne(){
             <div className="container">
                 <div className="grid md:grid-cols-2 grid-cols-1 items-center gap-[30px]">
                     <div>
-                        <h4 className="font-bold lg:text-[40px] text-3xl lg:leading-normal leading-normal mb-4 text-warning"><span className="text-dark">Hey!</span> I'm a <br/>
+                        <h4 className="font-bold lg:text-[40px] text-3xl lg:leading-normal leading-normal mb-4 text-warning">Hey, I'm a <br/>
                          {userData && userData.about.title}
                         <span className="typewrite text-amber-500" data-period="2000" data-type='[ "Dennis Scott", "Website Designer", "Web Developer", "UI/UX Designer" ]'> <span className="wrap"></span> </span></h4>
                         <p className="text-slate-400 max-w-xl">{userData && userData.about.description}</p>

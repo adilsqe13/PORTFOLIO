@@ -17,3 +17,11 @@
 .list-style-type-none{
   list-style-type: none;
 }
+.margin-top-100{
+  margin-top: 100px;
+}
+.dfjcac{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
