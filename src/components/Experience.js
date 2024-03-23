@@ -1,12 +1,8 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext } from "react";
 import userContext from "../CONTEXT/context/userContext";
 
 export default function Experience() {
-    const { fetchApi, userData } = useContext(userContext);
-
-    useEffect(()=>{
-        fetchApi();
-    },[]);
+    const { userData } = useContext(userContext);
 
     return (
         <section className="relative md:py-24 py-16 bg-gray-50 dark:bg-slate-800" id="experience">

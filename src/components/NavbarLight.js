@@ -1,11 +1,11 @@
-import React, {useEffect, useContext} from "react";
+import React, {useContext} from "react";
 import { Link } from "react-router-dom";
 import { Link as Link1 } from 'react-scroll';
 import * as Unicons from "@iconscout/react-unicons";
 import userContext from "../CONTEXT/context/userContext";
 
 export default function NavbarLight() {
-    const { fetchApi, userData } = useContext(userContext);
+    const { userData } = useContext(userContext);
     window.addEventListener("scroll", windowScroll);
     function windowScroll() {
         const navbar = document.getElementById("navbar");
@@ -34,9 +34,6 @@ export default function NavbarLight() {
         }
     }
 
-    useEffect(() => {
-        fetchApi();
-    }, []);
 
     return (
         <nav className="navbar" id="navbar">

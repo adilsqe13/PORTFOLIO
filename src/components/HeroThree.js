@@ -1,4 +1,4 @@
-import React, {useContext, useEffect} from "react";
+import React, {useContext} from "react";
 import { Link } from "react-router-dom";
 import userContext from "../CONTEXT/context/userContext";
 
@@ -6,11 +6,7 @@ import userContext from "../CONTEXT/context/userContext";
 
 
 export default function HeroThree(){ 
-    const { fetchApi, userData } = useContext(userContext);
-
-    useEffect(()=>{
-        fetchApi();
-    },[]);
+    const { userData } = useContext(userContext);
 
     return(
         <section className=' bg-transparent margin-top-100 py-5' id="home">

@@ -1,15 +1,11 @@
-import React, {useContext, useEffect} from "react";
+import React, {useContext} from "react";
 import * as Unicons from "@iconscout/react-unicons"
 import { Link } from "react-router-dom";
 import userContext from "../CONTEXT/context/userContext";
 
 
 export default function Footer(){ 
-    const { fetchApi, userData } = useContext(userContext);
-   
-    useEffect(()=>{
-        fetchApi();
-    },[]);
+    const { userData } = useContext(userContext);
     
     return(
         <footer className="footer bg-dark-footer relative text-gray-200 dark:text-gray-200">

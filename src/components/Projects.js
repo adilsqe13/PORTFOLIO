@@ -1,4 +1,4 @@
-import React, { useState, useContext, useEffect } from "react";
+import React, { useState, useContext } from "react";
 import { Link as Link2 } from "react-router-dom";
 import * as Unicons from '@iconscout/react-unicons'
 import Lightbox from 'react-18-image-lightbox';
@@ -6,7 +6,7 @@ import '../../node_modules/react-18-image-lightbox/style.css';
 import userContext from "../CONTEXT/context/userContext";
 
 export default function Projects() {
-    const { fetchApi, userData } = useContext(userContext);
+    const { userData } = useContext(userContext);
     const [photoIndex, setActiveIndex] = useState(0);
     const [isOpen, setOpen] = useState(false);
     const images = userData && userData.projects.map(el => el.image.url );
@@ -16,10 +16,6 @@ export default function Projects() {
         setActiveIndex(index)
         setOpen(!isOpen);
     }
-
-    useEffect(() => {
-        fetchApi();
-    }, []);
 
     return (
         <>

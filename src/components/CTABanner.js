@@ -1,13 +1,9 @@
-import React, {useContext, useEffect} from "react";
+import React, {useContext} from "react";
 import { Link } from "react-router-dom";
 import userContext from "../CONTEXT/context/userContext";
 
 export default function AddBanner(){
-    const { fetchApi, userData } = useContext(userContext);
-
-    useEffect(()=>{
-        fetchApi();
-    },[]);
+    const { userData } = useContext(userContext);
 
     return(
         <section className=' bg-transparent  py-5'>

@@ -1,4 +1,4 @@
-import React, {useContext, useEffect} from "react";
+import React, {useContext} from "react";
 import TinySlider from "tiny-slider-react";
 import '../../node_modules/tiny-slider/dist/tiny-slider.css';
 import userContext from "../CONTEXT/context/userContext";
@@ -30,11 +30,7 @@ const settings = {
     },
 }
 export default function Clients(){
-    const { fetchApi, userData } = useContext(userContext);
-   
-    useEffect(()=>{
-        fetchApi();
-    },[]);
+    const { userData } = useContext(userContext);
     
     return(
         <section className="relative md:py-24 py-16 bg-gray-50 dark:bg-slate-800" id="testi">

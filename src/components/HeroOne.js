@@ -1,15 +1,11 @@
-import React, {useContext, useEffect} from "react";
+import React, {useContext} from "react";
 import { Link } from "react-router-dom";
 import CountUp from 'react-countup';
 import userContext from "../CONTEXT/context/userContext";
 
 export default function HeroOne(){
-    const { fetchApi, userData } = useContext(userContext);
-    
+    const { userData } = useContext(userContext);
 
-    useEffect(()=>{
-        fetchApi(); 
-    },[]);
     return(
         <>
            <section className="relative pt-28 personal-wrapper overflow-hidden bg-amber-500/5" id="home">
