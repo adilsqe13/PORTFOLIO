@@ -40,7 +40,7 @@ export default function Navbar(){
         <div className="container flex flex-wrap items-center justify-between">
             <Link to= "/index" className="navbar-brand md:me-8" href="index.html">
                 <span className="inline-block dark:hidden bold fs-3">{userData?.about?.name ?? ""}</span>
-                <span className="hidden dark:inline-block bold fs-3 text-light">{userData && userData.about.name}</span>
+                <span className="hidden dark:inline-block bold fs-3 text-light">{userData?.about?.name?? ""}</span>
             </Link>
 
             <div className="nav-icons flex items-center lg_992:order-2 ms-auto md:ms-8">

@@ -14,12 +14,12 @@ export default function Footer(){
                 <div className="grid lg:grid-cols-12 md:grid-cols-3 grid-cols-1 items-center">
                     <div className="lg:col-span-3 md:text-start text-center">
                         <Link to="#" className="text-[22px] focus:outline-none">
-                            <span className="bold">{userData && userData.about.name}</span>
+                            <span className="bold">{userData?.about?.name?? ""}</span>
                         </Link>
                     </div>
 
                     <div className="lg:col-span-6 text-center mt-6 md:mt-0">
-                        <p className="mb-0">© {new Date().getFullYear()} &nbsp; {userData && userData.about.name} &nbsp; Design & Develop with{""} <i className="mdi mdi-heart text-red-600"></i> by <Link to="https://shreethemes.in/" target="_blank" className="text-reset">Md Adil Alam</Link>.</p>
+                        <p className="mb-0">© {new Date().getFullYear()} &nbsp; {userData?.about?.name?? ""} &nbsp; Design & Develop with{""} <i className="mdi mdi-heart text-red-600"></i> by <Link to="https://shreethemes.in/" target="_blank" className="text-reset">Md Adil Alam</Link>.</p>
                     </div>
 
                     <ul className="lg:col-span-3 list-none md:text-end text-center mt-6 md:mt-0">

@@ -14,9 +14,9 @@ export default function HeroOne(){
                 <div className="grid md:grid-cols-2 grid-cols-1 items-center gap-[30px]">
                     <div>
                         <h4 className="font-bold lg:text-[40px] text-3xl lg:leading-normal leading-normal mb-4 text-warning">Hey, I'm a <br/>
-                         {userData && userData.about.title}
+                         {userData?.about?.title ?? ""}
                         <span className="typewrite text-amber-500" data-period="2000" data-type='[ "Dennis Scott", "Website Designer", "Web Developer", "UI/UX Designer" ]'> <span className="wrap"></span> </span></h4>
-                        <p className="text-slate-400 max-w-xl">{userData && userData.about.description}</p>
+                        <p className="text-slate-400 max-w-xl">{userData?.about?.description ?? ""}</p>
                     
                         <div className="mt-6">
                             <Link to="" className="btn bg-amber-500 hover:bg-amber-600 border-amber-500 hover:border-amber-600 text-white rounded-md">Hire Me</Link>
@@ -31,14 +31,14 @@ export default function HeroOne(){
                             <span className="text-3xl font-medium mb-0"><span className="counter-value font-bold" data-target="125"> <CountUp
                                             start={0}
                                             className="counter-value"
-                                            end={userData && userData.projects.length}
+                                            end={userData?.projects?.length ?? ""}
                                             duration={2.75} /></span>+</span>
                             <h6 className="text-sm text-slate-400 mt-1">Project Completed</h6>
                         </div>
 
                         <div className="absolute lg:top-80 md:top-56 top-48 ltr:md:-right-0 ltr:right-2 rtl:md:-left-0 rtl:left-2 p-4 rounded-lg shadow-md dark:shadow-gray-800 bg-white dark:bg-slate-900 m-3 w-44 text-center">
-                            <h6 className="font-semibold">{userData && userData.about.title}</h6>
-                            <h6 className="text-sm text-slate-400 mt-1">{userData && userData.about.exp_year}+ Years Experience</h6>
+                            <h6 className="font-semibold">{userData?.about?.title ?? ""}</h6>
+                            <h6 className="text-sm text-slate-400 mt-1">{userData?.about?.exp_year ?? ""}+ Years Experience</h6>
                         </div>
                     </div>
                 </div>

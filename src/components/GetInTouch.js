@@ -13,7 +13,7 @@ export default function GetInTouch() {
                 <div className="grid grid-cols-1 pb-8 text-center">
                     <h3 className="mb-6 md:text-2xl text-xl md:leading-normal leading-normal font-semibold">Get In Touch</h3>
 
-                    <p className="text-slate-400 mx-auto text-[15px]">{userData && userData.about.description}</p>
+                    <p className="text-slate-400 mx-auto text-[15px]">{userData?.about?.description?? ""}</p>
                 </div>
 
                 <div className="grid grid-cols-1 lg:grid-cols-12 md:grid-cols-2 mt-8 items-center gap-[30px]">
@@ -53,7 +53,7 @@ export default function GetInTouch() {
 
                                 <div className="flex-1 ms-6">
                                     <h5 className="text-[17px] dark:text-white mb-2 font-medium">Phone</h5>
-                                    <Link to="tel:+152534-468-854" className="text-slate-400 text-[15px]">{userData && userData.about.phoneNumber}</Link>
+                                    <Link to="tel:+152534-468-854" className="text-slate-400 text-[15px]">{userData?.about?.phoneNumber?? ""}</Link>
                                 </div>
                             </div>
 
@@ -64,7 +64,7 @@ export default function GetInTouch() {
 
                                 <div className="flex-1 ms-6">
                                     <h5 className="text-[17px] dark:text-white mb-2 font-medium">Email</h5>
-                                    <Link to="mailto:contact@example.com" className="text-slate-400 text-[15px]">{userData && userData.email}</Link>
+                                    <Link to="mailto:contact@example.com" className="text-slate-400 text-[15px]">{userData?.email?? ""}</Link>
                                 </div>
                             </div>
 
@@ -75,7 +75,7 @@ export default function GetInTouch() {
 
                                 <div className="flex-1 ms-6">
                                     <h5 className="text-[17px] dark:text-white mb-2 font-medium">Location</h5>
-                                    <p className="text-slate-400 text-[15px] mb-2">{userData && userData.about.address}</p>
+                                    <p className="text-slate-400 text-[15px] mb-2">{userData?.about?.address?? ""}</p>
                                 </div>
                             </div>
                         </div>

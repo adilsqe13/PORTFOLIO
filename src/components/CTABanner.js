@@ -11,7 +11,7 @@ export default function AddBanner(){
                 <div className="grid grid-cols-1 text-center">
                     <h1 className=" md:text-2xl text-xl md:leading-normal leading-normal font-semibold">I Am Available For Freelancer Projects</h1>
 
-                    <p className="py-3">{userData && userData.about.description}</p>
+                    <p className="py-3">{userData?.about?.description?? ""}</p>
                 
                     <div className="relative m-0">
                         <Link to="" className="btn btn-warning m-0 form-control p-1">Hire Me</Link>

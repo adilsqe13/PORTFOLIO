@@ -12,11 +12,11 @@ export default function Services(){
             <div className="grid grid-cols-1 pb-8 text-center">
                 <h3 className="mb-6 md:text-2xl text-xl md:leading-normal leading-normal font-semibold">What do I offer</h3>
 
-                <p className="text-slate-400 mx-auto text-[15px]">{userData && userData.about.description}</p>
+                <p className="text-slate-400 mx-auto text-[15px]">{userData?.about?.description ?? ""}</p>
             </div>
 
             <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 mt-8 gap-[30px]">
-               {userData && userData.services.map((item,index)=>{
+               {userData?.services?.map((item,index)=>{
                 const Icon = item.image.url;
                 return(
                     <div className="px-6 py-10 shadow shadow-gray-200 hover:shadow-md dark:shadow-gray-800 dark:hover:shadow-gray-700 transition duration-500 rounded-2xl bg-white dark:bg-slate-900" key={index}>
