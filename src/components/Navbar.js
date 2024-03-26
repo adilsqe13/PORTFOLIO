@@ -39,7 +39,7 @@ export default function Navbar(){
         <nav className="navbar" id="navbar">
         <div className="container flex flex-wrap items-center justify-between">
             <Link to= "/index" className="navbar-brand md:me-8" href="index.html">
-                <span className="inline-block dark:hidden bold fs-3">{userData && userData.about.name}</span>
+                <span className="inline-block dark:hidden bold fs-3">{userData?.about?.name ?? ""}</span>
                 <span className="hidden dark:inline-block bold fs-3 text-light">{userData && userData.about.name}</span>
             </Link>
 

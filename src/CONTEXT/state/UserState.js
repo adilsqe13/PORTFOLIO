@@ -6,9 +6,14 @@ export default function UserState(props) {
     const [ userData, setUserData] = useState('');
 
     const fetchApi = async() =>{
+      try {
         const response = await fetch('https://portfolio-backend-30mp.onrender.com/api/v1/get/user/65b3a22c01d900e96c4219ae');
         const data = await response.json();
         setUserData(data.user);
+      } catch (error) {
+        //Error handling
+        console.log(error);
+      }
     }
   
   return (
